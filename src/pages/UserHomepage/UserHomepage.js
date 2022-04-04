@@ -38,6 +38,7 @@ const styles = {
 function UserHomepage() {
 
   let navigate = useNavigate();
+
 const routeChange = () =>{ 
     let path = '/supplier/orders'; 
     navigate(path);
@@ -51,9 +52,10 @@ const routeChange = () =>{
     useEffect(() => {
       let config = {
         headers: {
-          authorization: "Bearer NjI0NGEzYjQ2NDBkYjAzMjlkZmFkZWJk",
+          authorization: "Bearer " + localStorage.getItem("token"),
         }
       }
+      console.log(config.headers.authorization);
       const getCoursesURL = baseURL + 'courses/list';
       axios.get(getCoursesURL,config)
       .then((data) => {

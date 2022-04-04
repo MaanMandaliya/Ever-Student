@@ -31,7 +31,7 @@ const Register = () => {
     const emailExistsString = "This Email Id already exists"
     const emailRegEx = /^[a-zA-Z0-9\.-]+@([a-zA-Z0-9-]+\.)+[a-z]{2,6}$/;
     const passwordRegEx = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*?]).{8,}$/;
-    const url = baseURL + "/users/register"
+    const url = baseURL + "users/register"
     let helperTextForEmail = "";
     let helperTextForPassword = "";
     if ((!emailId.match(emailRegEx) || emailId == "") && isError) {
@@ -80,7 +80,7 @@ const Register = () => {
                 console.log("SUCCESS!")
                 navigate('/home');
             }).catch(err => {
-                setEmailExistsError(true);
+                setError(true);
             });
 
         }

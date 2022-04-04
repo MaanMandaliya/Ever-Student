@@ -32,7 +32,8 @@ const Login = () => {
                 if (res.status === 200) {
                     console.log("Logged in");
                     localStorage.setItem("email",emailId);
-                    if(res.data.user.role == "learner"){
+                    localStorage.setItem("token", res.data.user.token);
+                    if(res.data.user.role == "learner" || res.data.user.role =="student"){
                         navigate("/home");
                     } 
                     else if(res.data.user.role == "admin"){

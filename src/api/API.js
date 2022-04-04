@@ -1,5 +1,5 @@
-export const api = "http://localhost:3001/app";
+export const api = "https://backend-vjlxhnszuq-uc.a.run.app/app";
 
-export const orderAPI = "http://localhost:3001/orders/";
+export const orderAPI = "https://backend-vjlxhnszuq-uc.a.run.app/orders/";
 
-export const userAPI = "http://localhost:3001/users";
+export const userAPI = "https://backend-vjlxhnszuq-uc.a.run.app/users";
