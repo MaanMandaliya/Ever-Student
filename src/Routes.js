@@ -12,6 +12,8 @@ import SupplierDashboard from "./pages/Instructor/InstructorDashboard";
 import SupplierOrders from "./pages/Instructor/InstructorCourses";
 import OrderDetail from "./pages/Instructor/InstructorCourseDetail";
 import Cart from "./pages/Cart/Cart";
+import InstructorAddCourse from "./pages/Instructor/InstructorAddCourse";
+
 
 function App() {
 
@@ -26,6 +28,7 @@ function App() {
         <Route path="/home" element={<UserHomepage />} />
         <Route path="/admin" element={<AdminHomepage />} />
         <Route path="/instructor" element={<SupplierDashboard />} />
+        <Route path="/instructor/addCourses" element={<InstructorAddCourse />} />
         <Route path="/instructor/courses" element={<SupplierOrders />} />
         <Route path="/instructor/courses/:id" element={<OrderDetail />}></Route>
         <Route path="/admin" element={<AdminHomepage/>} />

@@ -35,6 +35,13 @@ const routeChange = () =>{
     navigate(path);
   }
 
+  const onAddCourseHandler = () => {
+    console.log("onAddCourseHandler START");
+    let path = '/instructor/addCourses';
+    navigate(path);
+    console.log("onAddCourseHandler END");
+  }
+
   return (
     <React.Fragment>
       <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
@@ -157,37 +164,37 @@ const routeChange = () =>{
                   
                   titleTypographyProps={{ align: 'center' }}
 
-                  subheaderTypographyProps={{
-                    align: 'center',
-                  }}
+                subheaderTypographyProps={{
+                  align: 'center',
+                }}
+                sx={{
+                  backgroundColor: (theme) =>
+                    theme.palette.mode === 'light'
+                      ? theme.palette.grey[200]
+                      : theme.palette.grey[700],
+                }}
+              />
+              <CardContent>
+                <Box
                   sx={{
-                    backgroundColor: (theme) =>
-                      theme.palette.mode === 'light'
-                        ? theme.palette.grey[200]
-                        : theme.palette.grey[700],
+                    display: 'flex',
+                    justifyContent: 'center',
+                    mb: 5,
                   }}
-                />
-                <CardContent>
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      justifyContent: 'center',
-                      mb: 5,
-                    }}
-                  >
-                   
-                  </Box>
-                
-                </CardContent>
-                <CardActions>
-                  <Button fullWidth variant="outlined">
-                    Add Course
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
-         
-         
+                >
+
+                </Box>
+
+              </CardContent>
+              <CardActions>
+                <Button fullWidth variant="outlined" onClick={onAddCourseHandler}>
+                  Add Course
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+
+
         </Grid>
       </Container>
       
