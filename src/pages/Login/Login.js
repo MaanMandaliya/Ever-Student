@@ -33,6 +33,7 @@ const Login = () => {
                     console.log("Logged in");
                     localStorage.setItem("email",emailId);
                     localStorage.setItem("token", res.data.user.token);
+                    localStorage.setItem("userId", res.data.user.id);
                     if(res.data.user.role == "learner" || res.data.user.role =="student"){
                         navigate("/home");
                     } 
@@ -109,7 +110,7 @@ const Login = () => {
                         </ControlContainer>
                     </FormWrapper>
                     <ImageWrapper>
-                        <img src="https://cdn.pickuplimes.com/cache/22/13/2213b2b794c1b5c3aa3f120c548f9baa.jpg" />
+                        {/*<img src="https://cdn.pickuplimes.com/cache/22/13/2213b2b794c1b5c3aa3f120c548f9baa.jpg" />*/}
                     </ImageWrapper>
                 </ContentWrapper>
                 <FooterContainer />

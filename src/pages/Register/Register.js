@@ -175,7 +175,7 @@ const Register = () => {
                         </ControlContainer>
                     </FormWrapper>
                     <ImageWrapper className="registration__page">
-                        <img src="https://cdn.pickuplimes.com/cache/22/13/2213b2b794c1b5c3aa3f120c548f9baa.jpg" />
+                        {/*<img src="https://cdn.pickuplimes.com/cache/22/13/2213b2b794c1b5c3aa3f120c548f9baa.jpg" />*/}
                     </ImageWrapper>
                 </ContentWrapper>
                 <FooterContainer />
